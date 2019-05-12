@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+.highlight {
+  background-color: yellow;
+}
+	</style>
+	
+
+	<script type="text/javascript">
+function highlight() {
+	 var text = "";
+    if (window.getSelection) {
+        text = window.getSelection().toString();
+    } else if (document.selection && document.selection.type != "Control") {
+        text = document.selection.createRange().text;
+    }
+  var inputText = document.getElementById("inputText");
+  var innerHTML = inputText.innerHTML;
+  var index = innerHTML.indexOf(text);
+  if (index >= 0) { 
+   innerHTML = innerHTML.substring(0,index) + "<span class='highlight'>" + innerHTML.substring(index,index+text.length) + "</span>" + innerHTML.substring(index + text.length);
+   inputText.innerHTML = innerHTML;
+  }
+}
+	</script>
+
+</head>
+<body>
+	<button onclick="highlight()">Highlight</button>
+<div id="inputText">
+<b><u id="about">About us :</u></b>
+<p>
+The department started offering B.Tech. Programme in Computer Engineering in 1987 with initial intake of 30 students and subsequently raised to 92. Department also started B.Tech programme in Information Technology (IT) in 2006 with present intake of 92 students. The department is proud to have a record of almost 100% placement for last 10 years. The department also offers two M.Tech. programs, one in Computer Engineering and other in Cyber Security. Department started Ph.D. program in 2002. So far 20 Ph.D.s have been awarded and 39 PhDs are in progress. Currently there are five sponsored projects undergoing in the department.<br>
+Faculty of the department have specialized areas for advanced studies and research in Distributed Computing, Software Engineering, Computer Networks, Database and Data Mining, Natural Language Processing, Information and Cyber Security, Image Processing.<br>
+The department is well equipped with state-of-the-art laboratories of all major domains of Computer Engineering and Information Technology with excellent intranet, servers, hardware and software support.<br>
+Each year, many students of the department get selected for higher studies in world’s most reputed Universities and Institutes. The department is equally active in research with many quality publications each year in IEEE, Sciencedirect, ACM, Springer, Wiley etc. For the overall
+development we also cover the other aspects of life like Health management, moral and ethical development of the students.
+</p>
+
+<b><u id="programs">Programs :</u></b>
+
+<b><u id="outcomes">Programs Outcomes :</u></b>
+<p>
+Engineering Graduates will be able to:<br>
+<i>PO1.</i> Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.<br><br>
+<i>PO2.</i> Problem analysis: Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.<br><br>
+<i>PO3.</i> Design/development of solutions: Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for the public health and safety, and the cultural, societal, and environmental considerations.<br><br>
+<i>PO4.</i> Conduct investigations of complex problems: Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.<br><br>
+</p>
+</div>
+</body>
+
+</html>
+
+
